@@ -7,7 +7,7 @@ namespace MyShop.Core.Models
     {
         public string Id { get; set; }
 
-        [StringLength]
+        [StringLength(20)]
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
