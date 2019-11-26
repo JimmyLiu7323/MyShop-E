@@ -13,9 +13,9 @@ namespace MyShop.WebUI.Controllers
 {
     public class ProductManagerController : Controller
     {
-        IRepository<Product> context;
-        IRepository<ProductCategory> productCategories;
-        public ProductManagerController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
+        IBasketService<Product> context;
+        IBasketService<ProductCategory> productCategories;
+        public ProductManagerController(IBasketService<Product> productContext, IBasketService<ProductCategory> productCategoryContext)
         {
             context = productContext;
             productCategories = productCategoryContext;

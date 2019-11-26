@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyShop.DataAcess.SQL
 {
-    public class SQLRepository<T> : IRepository<T> where T : BaseEntity
+    public class SQLRepository<T> : IBasketService<T> where T : BaseEntity
     {
         internal DataContext context;
         internal DbSet<T> dbSet;

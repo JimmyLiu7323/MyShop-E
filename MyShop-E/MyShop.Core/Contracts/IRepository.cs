@@ -3,7 +3,7 @@ using MyShop.Core.Models;
 
 namespace MyShop.Core.Contracts
 {
-    public interface IRepository<T> where T : BaseEntity
+    public interface IBasketService<T> where T : BaseEntity
     {
         IQueryable<T> Collection();
         void Commit();

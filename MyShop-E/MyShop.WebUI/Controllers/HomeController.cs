@@ -11,9 +11,9 @@ namespace MyShop.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        IRepository<Product> context;
-        IRepository<ProductCategory> productCategories;
-        public HomeController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
+        IBasketService<Product> context;
+        IBasketService<ProductCategory> productCategories;
+        public HomeController(IBasketService<Product> productContext, IBasketService<ProductCategory> productCategoryContext)
         {
             context = productContext;
             productCategories = productCategoryContext;

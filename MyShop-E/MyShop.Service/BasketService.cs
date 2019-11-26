@@ -12,12 +12,12 @@ namespace MyShop.Service
 {
     public class BasketService : IBasketService
     {
-        IRepository<Product> productContext;
-        IRepository<Basket> basketContext;
+        IBasketService<Product> productContext;
+        IBasketService<Basket> basketContext;
 
         public const string BasketSessionName = "eCommerceBasket";
 
-        public BasketService(IRepository<Product> ProductContext, IRepository<Basket> BasketContext)
+        public BasketService(IBasketService<Product> ProductContext, IBasketService<Basket> BasketContext)
         {
             this.basketContext = BasketContext;
             this.productContext = ProductContext;
